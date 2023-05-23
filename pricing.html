@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="stylesheet" href="style.css" />
+
+    <!-- FONT -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,500;1,100;1,200;1,300;1,400;1,500&family=Space+Grotesk:wght@500;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- TAIWIND -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,typography,aspect-ratio,line-clamp"></script>
+
+    <!-- jQuarey -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              primaryBlack: "#292929",
+              mainWhite: "#F5F5F5",
+              white: "#FFFFFF",
+              secWhite: "#FFFFFF33",
+              primaryBlue: "#0024CC",
+              secondaryYellow: "#FFA200",
+              shadeBlue: "#E8E9FD",
+              secondaryBlue: "#000A37",
+              lightBlue: "#E8E9FD",
+            },
+          },
+        },
+      };
+    </script>
+
+    <style type="text/tailwindcss">
+      @layer utilities {
+        .content-auto {
+          content-visibility: auto;
+        }
+      }
+    </style>
+
+    <title>Pricing</title>
+  </head>
+
+  <body class="pricing-page bg-mainWhite">
+    <div class="lg:px-20">
+      <section id="nav"></section>
+
+      <section id="navMobile">
+        <div class="navOnSmallSceeen hidden">
+          <div class="flex flex-col items-end justify-between list-none">
+            <li
+              class="font-poppins font-100 text-white py-3 px-4 rounded-2xl hover:bg-primaryBlue hover:text-mainWhite"
+            >
+              <a href="./about.html">About</a>
+            </li>
+            <li
+              class="font-poppins font-100 text-white py-3 px-4 rounded-2xl hover:bg-primaryBlue hover:text-mainWhite"
+            >
+              <a href="#">Tracking and Calculator</a>
+            </li>
+            <li
+              class="font-poppins font-100 text-white py-3 px-4 rounded-2xl hover:bg-primaryBlue hover:text-mainWhite"
+            >
+              <a href="./tracking.html">Track Delivery</a>
+            </li>
+            <li
+              class="font-poppins font-100 text-white py-3 px-4 rounded-2xl hover:bg-primaryBlue hover:text-mainWhite"
+            >
+              <a href="#">Solution</a>
+            </li>
+            <li
+              class="font-poppins font-100 text-white py-3 px-4 rounded-2xl hover:bg-primaryBlue hover:text-mainWhite"
+            >
+              <a href="./contact-us.html">Contact Us</a>
+            </li>
+          </div>
+
+          <div class="flex flex-col">
+            <a href="./login.html">
+              <button
+                class="mr-2 text-primaryBlue font-poppins font-400 py-3 px-8 rounded-3xl hover:bg-primaryBlue hover:text-mainWhite"
+              >
+                Login
+              </button>
+            </a>
+            <a href="./signup.html">
+              <button
+                class="py-3 px-8 bg-primaryBlue text-mainWhite rounded-3xl"
+              >
+                Sign Up
+              </button>
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <section id="showcase" class="p-5">
+        <div class="text-center my-20">
+          <h1 class="text-5xl font-Space+Grotesk font-700 text-primaryBlack">
+            Ready<span class="text-secondaryYellow"> to get started</span>
+          </h1>
+          <p class="mt-5 text-md font-poppins font-400 text-primaryBlack">
+            Choose a logistic plan tailored to your needs
+          </p>
+        </div>
+      </section>
+
+      <section
+        id="pricing"
+        class="grid lg:grid-cols-3 gap-20 my-20 lg:py-10 lg:px-0 px-5"
+      >
+        <div class="p-5 border-2 border-secondaryYellow rounded-3xl">
+          <h2 class="text-primaryBlack font-Space+Grotesk text-3xl font-700">
+            By Sea
+          </h2>
+          <div class="my-5">
+            <h2 class="text-primaryBlack font-200 font-poppins text-sx">
+              COST
+            </h2>
+            <p
+              class="text-primaryBlack font-Space+Grotesk font-700 text-xl bold"
+            >
+              From NGN 2.5 per lbs
+            </p>
+          </div>
+          <div class="my-">
+            <h2 class="text-primaryBlack font-200 font-poppins text-sx">
+              WEIGHT
+            </h2>
+            <p
+              class="text-primaryBlack font-Space+Grotesk font-700 text-xl bold"
+            >
+              Up to 20,000 lbs
+            </p>
+          </div>
+        </div>
+
+        <div class="p-5 border-2 border-secondaryYellow rounded-3xl">
+          <h2 class="text-primaryBlack font-Space+Grotesk text-3xl font-700">
+            By Air
+          </h2>
+          <div class="my-5">
+            <h2 class="text-primaryBlack font-200 font-poppins text-sx">
+              COST
+            </h2>
+            <p
+              class="text-primaryBlack font-Space+Grotesk font-700 text-xl bold"
+            >
+              From NGN 2.5 per lbs
+            </p>
+          </div>
+          <div class="my-">
+            <h2 class="text-primaryBlack font-200 font-poppins text-sx">
+              WEIGHT
+            </h2>
+            <p
+              class="text-primaryBlack font-Space+Grotesk font-700 text-xl bold"
+            >
+              Up to 20,000 lbs
+            </p>
+          </div>
+        </div>
+
+        <div class="p-5 border-2 border-secondaryYellow rounded-3xl">
+          <h2 class="text-primaryBlack font-Space+Grotesk text-3xl font-700">
+            By Land
+          </h2>
+          <div class="my-5">
+            <h2 class="text-primaryBlack font-200 font-poppins text-sx">
+              COST
+            </h2>
+            <p
+              class="text-primaryBlack font-Space+Grotesk font-700 text-xl bold"
+            >
+              From NGN 2.5 per lbs
+            </p>
+          </div>
+          <div class="my-">
+            <h2 class="text-primaryBlack font-200 font-poppins text-sx">
+              WEIGHT
+            </h2>
+            <p
+              class="text-primaryBlack font-Space+Grotesk font-700 text-xl bold"
+            >
+              Up to 20,000 lbs
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section
+        id="price-calculator"
+        class="grid lg:grid-cols-2 gap-40 items-center"
+      >
+        <div class="head-text2">
+          <h1
+            class="h1 text-6xl text-secondaryYellow font-Space+Grotesk font-700"
+          >
+            Find the price right now
+          </h1>
+          <h2
+            class="text-5xl text-primaryBlack font-500 font-Space+Grotesk mt-5"
+          >
+            Use our calculator
+          </h2>
+        </div>
+
+        <form action="" class="lg:px-0 px-5">
+          <div class=" ">
+            <label for="inputName" class="">SHIPPING METHOD</label>
+            <div
+              class="switch-key border-2 border-primaryBlack p-2 rounded-3xl flex flex-row justify-between"
+            >
+              <button
+                data-action="land"
+                class="active-key py-1 lg:px-12 px-5 text-primaryBlue bg-shadeBlue border-0 rounded-2xl"
+              >
+                Land
+              </button>
+              <button
+                data-action="air"
+                class="py-1 lg:px-14 px-7 text-primaryBlue bg-shadeBlue border-0 rounded-2xl"
+              >
+                Air
+              </button>
+              <button
+                data-action="sea"
+                class="py-1 lg:px-14 px-7 text-primaryBlue bg-shadeBlue border-0 rounded-2xl"
+              >
+                Sea
+              </button>
+            </div>
+          </div>
+
+          <div
+            class="mt-10 flex lf:flex-row grid grid-row-2 gap-5 justify-between items-center"
+          >
+            <div class="lg:basis-1/2">
+              <label for="inputEmail" class="">TYPE OF GOODS</label> <br />
+              <select
+                name=""
+                id=""
+                class="rounded-2xl px-2 border-2 border-primaryBlack"
+              >
+                <option value="" class="w-5/5">select</option>
+                <option value=""></option>
+                <option value=""></option>
+                <option value=""></option>
+              </select>
+            </div>
+
+            <div class="lg:basis-1/2">
+              <label for="inputEmail" class="fit">WEIGHT</label>
+              <div
+                class="flex flex-row items-center border-2 border-primaryBlack rounded-2xl"
+              >
+                <input
+                  type="text"
+                  placeholder="0"
+                  class="bg-transparent border-0 outline-none"
+                />
+                <p>ibs</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="my-10 flex flex-row gap-5 justify-between items-center">
+            <div class="basis-1/2">
+              <label for="inputEmail" class="">FROM</label> <br />
+              <div class="grid gap-3">
+                <select
+                  name=""
+                  id=""
+                  class="rounded-2xl px-2 border-2 border-primaryBlack"
+                >
+                  <option value="" class="w-5/5">Country</option>
+                  <option value=""></option>
+                  <option value=""></option>
+                  <option value=""></option>
+                </select>
+                <select
+                  name=""
+                  id=""
+                  class="rounded-2xl px-2 border-2 border-primaryBlack"
+                >
+                  <option value="" class="w-5/5">city</option>
+                  <option value=""></option>
+                  <option value=""></option>
+                  <option value=""></option>
+                </select>
+              </div>
+            </div>
+
+            <div class="basis-1/2">
+              <label for="inputEmail" class="">TO</label> <br />
+              <div class="grid gap-3">
+                <select
+                  name=""
+                  id=""
+                  class="rounded-2xl px-2 border-2 border-primaryBlack"
+                >
+                  <option value="" class="w-5/5">Country</option>
+                  <option value=""></option>
+                  <option value=""></option>
+                  <option value=""></option>
+                </select>
+
+                <select
+                  name=""
+                  id=""
+                  class="rounded-2xl px-2 border-2 border-primaryBlack"
+                >
+                  <option value="" class="w-5/5">City</option>
+                  <option value=""></option>
+                  <option value=""></option>
+                  <option value=""></option>
+                </select>
+              </div>
+            </div>
+          </div>
+
+          <div
+            class="flex flex-row justify-around w-1/2 py-2 lg:px-20 bg-primaryBlue rounded-2xl"
+          >
+            <button class="text-mainWhite">Estimate</button>
+            <img src="./img/Vector.png" alt="" class="w-6" />
+          </div>
+        </form>
+      </section>
+
+      <section></section>
+    </div>
+
+    <section id="footer"></section>
+  </body>
+  <script>
+    $("#nav").load("nav.html");
+    $("#footer").load("footer.html");
+  </script>
+  <script src="script.js"></script>
+</html>

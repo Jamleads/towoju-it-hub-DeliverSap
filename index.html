@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="stylesheet" href="style.css" />
+
+    <!-- FONT -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,500;1,100;1,200;1,300;1,400;1,500&family=Space+Grotesk:wght@500;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- TAIWIND -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,typography,aspect-ratio,line-clamp"></script>
+
+    <!-- jQuarey -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              primaryBlack: "#292929",
+              mainWhite: "#F5F5F5",
+              white: "#FFFFFF",
+              secWhite: "#FFFFFF33",
+              primaryBlue: "#0024CC",
+              secondaryYellow: "#FFA200",
+              shadeBlue: "#E8E9FD",
+              secondaryBlue: "#000A37",
+            },
+          },
+        },
+      };
+    </script>
+
+    <style type="text/tailwindcss">
+      @layer utilities {
+        .content-auto {
+          content-visibility: auto;
+        }
+      }
+    </style>
+
+    <title>Home</title>
+  </head>
+
+  <body class="bg-mainWhite">
+    <div class="lg:px-20">
+      <nav class="nav flex flex-row items-center justify-between py-8">
+        <div class="nav-logo logo-cont">
+          <a href="./index.html"><img src="./img/Log.png" alt="" /></a>
+        </div>
+
+        <div
+          class="nav-links  flex flex-row items-center justify-between list-none"
+        >
+          <li
+            class="mr-3 font-poppins font-100 text-primaryBlack py-3 px-4 rounded-2xl hover:bg-primaryBlue hover:text-mainWhite"
+          >
+            <a href="./about.html">About</a>
+          </li>
+          <li
+            class="mr-3 font-poppins font-100 text-primaryBlack py-3 px-4 rounded-2xl hover:bg-primaryBlue hover:text-mainWhite"
+          >
+            <a href="#">Tracking and Calculator</a>
+          </li>
+          <li
+            class="font-poppins font-100 text-primaryBlack py-3 px-4 rounded-2xl hover:bg-primaryBlue hover:text-mainWhite"
+          >
+            <a href="./tracking.html">Track Delivery</a>
+          </li>
+          <li
+            class="ml-3 font-poppins font-100 text-primaryBlack py-3 px-4 rounded-2xl hover:bg-primaryBlue hover:text-mainWhite"
+          >
+            <a href="#">Solution</a>
+          </li>
+          <li
+            class="ml-3 font-poppins font-100 text-primaryBlack py-3 px-4 rounded-2xl hover:bg-primaryBlue hover:text-mainWhite"
+          >
+            <a href="./contact-us.html">Contact Us</a>
+          </li>
+        </div>
+
+        <div class="sign-in">
+          <a href="./login.html">
+            <button
+            class="mr-2 text-primaryBlue font-poppins font-400 py-3 px-8 rounded-3xl hover:bg-primaryBlue hover:text-mainWhite"
+            >
+            Login
+            </button>
+          </a>
+
+          <a href="./signup.html">
+            <button class="py-3 px-8 bg-primaryBlue text-mainWhite rounded-3xl">
+              Sign Up
+            </button>
+          </a>
+        </div>
+
+        <div class="menu lg:hidden text-primaryBlue">
+          Menu
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          >
+            <path d="M4 6h16M4 12h16M4 18h16"</path>
+          </svg>
+        </div>
+      </nav>
+
+      <div class="navOnSmallSceeen hidden">
+        <div
+          class="flex flex-col items-end justify-between list-none"
+        >
+          <li
+            class=" font-poppins font-100 text-white py-3 px-4 rounded-2xl hover:bg-primaryBlue hover:text-mainWhite"
+          >
+            <a href="./about.html">About</a>
+          </li>
+          <li
+            class=" font-poppins font-100 text-white py-3 px-4 rounded-2xl hover:bg-primaryBlue hover:text-mainWhite"
+          >
+            <a href="#">Tracking and Calculator</a>
+          </li>
+          <li
+            class="font-poppins font-100 text-white py-3 px-4 rounded-2xl hover:bg-primaryBlue hover:text-mainWhite"
+          >
+            <a href="#">Track Delivery</a>
+          </li>
+          <li
+            class=" font-poppins font-100 text-white py-3 px-4 rounded-2xl hover:bg-primaryBlue hover:text-mainWhite"
+          >
+            <a href="#">Solution</a>
+          </li>
+          <li
+            class=" font-poppins font-100 text-white py-3 px-4 rounded-2xl hover:bg-primaryBlue hover:text-mainWhite"
+          >
+            <a href="./contact-us.html">Contact Us</a>
+          </li>
+        </div>
+
+        <div class=" flex flex-col">
+          <a href="./login.html">
+            <button
+              class="mr-2 text-primaryBlue font-poppins font-400 py-3 px-8 rounded-3xl hover:bg-primaryBlue hover:text-mainWhite"
+            >
+              Login
+            </button>
+          </a>
+          <a href="./signup.html">
+            <button class="py-3 px-8 bg-primaryBlue text-mainWhite rounded-3xl">
+              Sign Up
+            </button>
+          </a>
+          </div>
+      </div>
+
+      <section
+        class="showcase min-h-[40rem] flex flex-col justify-between items-center xm:"
+      >
+        <div>
+          <h1
+            class="h1 head-text font-Space+Grotesk font-700 text-5xl text-center lg:mt-20 text-primaryBlack"
+          >
+            Choose from Multiple Couriers for <br />
+            Flexible and
+            <span class="text-secondaryYellow">Reliable Shipping</span>
+          </h1>
+        </div>
+
+        <div>
+          <button
+            class="py-3 px-8 bg-primaryBlue text-xs text-white rounded-3xl hover:bg-mainWhite hover:text-primaryBlue border-2 border-primaryBlue"
+          >
+            Get Started
+          </button>
+        </div>
+
+        <div>
+          <img src="./img/dashboard.png" alt="" />
+        </div>
+      </section>
+    </div>
+
+    <section
+      class="count lg:px-20 py-8 bg-primaryBlue flex flex-row justify-between items-center"
+    >
+      <div class="">
+        <h2 class="font-Space+Grotesk font-500 text-2xl text-white">
+          100K &plus;
+        </h2>
+        <p class="font-poppins font-100 text-xs text-white">
+          Operational Vehicles
+        </p>
+      </div>
+      <div>
+        <h2 class="font-Space+Grotesk font-500 text-2xl text-white">
+          1K &plus;
+        </h2>
+        <p class="font-poppins font-100 text-xs text-white">Office</p>
+      </div>
+      <div>
+        <h2 class="font-Space+Grotesk font-500 text-2xl text-white">
+          10 &plus;
+        </h2>
+        <p class="font-poppins font-100 text-xs text-white">Years Experience</p>
+      </div>
+      <div>
+        <h2 class="font-Space+Grotesk font-500 text-2xl text-white">
+          1K &plus;
+        </h2>
+        <p class="font-poppins font-100 text-xs text-white">Happy Customers</p>
+      </div>
+    </section>
+
+    <div class="lg:px-20">
+      <section class="mt-10 p-1">
+        <div class="mt-10">
+          <h2
+            class="expect h1 text-4xl pr-10 lg:w-1/2 font-Space+Grotesk font-500 xm:w-100 xs:mx-auto"
+          >
+            What To expect from DeliverAsap in just a
+            <span class="text-secondaryYellow">CLICK</span>
+          </h2>
+        </div>
+
+        <div class="mt-10 p-1">
+          <img src="./img/cago.png" alt="" class="w-100 my-10" />
+        </div>
+      </section>
+
+      <section class="card-side grid lg:grid-cols-3  gap-20 my-10">
+        <div class="flex flex-col justify-between p-5 bg-shadeBlue rounded-3xl">
+          <h3 class="mb-10 font-poppins font-100 text-2xl">
+            Analytics & Reporting
+          </h3>
+          <p class="font-poppins font-100 text-xs">
+            Optimize Your Business Operations with In-Depth Analytics and
+            Reporting Tools on Our Platform
+          </p>
+        </div>
+        <div class="flex flex-col justify-between p-5 bg-shadeBlue rounded-3xl">
+          <h3 class="mb-10 font-poppins font-100 text-2xl">
+            Several Trusted Logistics Partners
+          </h3>
+          <p class="font-poppins font-100 text-xs">
+            Choose from Multiple Couriers for Flexible and Reliable Shippings
+          </p>
+        </div>
+        <div class="flex flex-col justify-between p-5 bg-shadeBlue rounded-3xl">
+          <h3 class="mb-10 font-poppins font-100 text-2xl">
+            Pay Less for More
+          </h3>
+          <p class="font-poppins font-100 text-xs">
+            Save money, save time, save stress; you get dividends up to 58% of
+            local logistics
+          </p>
+        </div>
+        <div class="flex flex-col justify-between p-5 bg-shadeBlue rounded-3xl">
+          <h3 class="mb-10 font-poppins font-100 text-2xl">
+            Real Time Tracking & Goods Insurance
+          </h3>
+          <p class="font-poppins font-100 text-xs">
+            Stay Informed with Real-Time Shipment Tracking on Our Platform -
+            Deliver Better Customer Service with Ease.
+          </p>
+        </div>
+        <div class="flex flex-col justify-between p-5 bg-shadeBlue rounded-3xl">
+          <h3 class="mb-10 font-poppins font-100 text-2xl">
+            Door step delivery
+          </h3>
+          <p class="font-poppins font-100 text-xs">
+            From your phone/pc to the world and to your doorstep again
+          </p>
+        </div>
+        <div class="flex flex-col justify-between p-5 bg-shadeBlue rounded-3xl">
+          <h3 class="mb-10 font-poppins font-100 text-2xl">
+            24/7 Service & Enquiry Support
+          </h3>
+          <p class="font-poppins font-100 text-xs">
+            We want to serve you always, please allow us
+          </p>
+        </div>
+      </section>
+
+      <section
+        class="img-side flex lg:flex-row items-center bg-secondaryBlue px-10 py-20 rounded-3xl"
+      >
+        <div class="basis-1/2">
+          <img src="./img/Mask group.png" alt="" class="w-100 mx-auto" />
+        </div>
+        <div class="basis-1/2 lg:pl-10 lg:pr-20 img-side-text">
+          <h3 class="font-poppins font-100 text-2xl text-white mb-10">
+            Analytics & Reporting
+          </h3>
+          <p class="font-poppins font-100 text-xs text-white mb-5">
+            Lorem ipsum dolor sit amet consectetur. Vestibulum maecenas non sed
+            lobortis turpis vulputate magna.
+          </p>
+          <p class="font-poppins font-100 text-xs text-white mb-5">
+            Lorem ipsum dolor sit amet consectetur. Vestibulum maecenas non sed
+            lobortis turpis vulputate magna.
+          </p>
+          <p class="font-poppins font-100 text-xs text-white mb-5">
+            Lorem ipsum dolor sit amet consectetur. Vestibulum maecenas non sed
+            lobortis turpis vulputate magna.
+          </p>
+          <p class="font-poppins font-100 text-xs text-white mb-5">
+            Lorem ipsum dolor sit amet consectetur. Vestibulum maecenas non sed
+            lobortis turpis vulputate magna.
+          </p>
+        </div>
+      </section>
+    </div>
+
+    <footer class="footer lg:px-20 py-10 bg-secondaryBlue mt-[200px]">
+      <div
+        class="flex flex-row justify-between items-center border-b-2 pb-10 border-secWhite"
+      >
+        <div class="">
+          <h3
+            class="h1 head-text2 font-Space+Grotesk font-400 text-4xl text-white"
+          >
+            Let’s help you ship your <br />
+            <span class="text-secondaryYellow">Next Goods</span>
+          </h3>
+        </div>
+        <div class="p-5 bg-secWhite">
+          <img src="./img/Vector.png" alt="" />
+        </div>
+      </div>
+
+      <div
+        class="footer2 flex flex-row justify-between my-10 font-poppins font-100 text-mainWhite text-xs"
+      >
+        <div class="basis-1/4">
+          <p class="line-hieght">
+            Lorem ipsum dolor sit amet consectetur. Vestibulum maecenas non sed
+            lobortis turpis vulputate magna.
+          </p>
+        </div>
+        <div class="line-hieght">
+          <ul>
+            <li><a href="./index.html">Home</a></li>
+            <li><a href="./about.html">About US</a></li>
+            <li><a href="./pricing.html">Pricing</a></li>
+            <li><a href="./tracking.html">Track Delivery</a></li>
+            <li><a href="./calculator.html">Calculator</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <ul class="line-hieght">
+            <li><a href="#"></a>Instagram</li>
+            <li><a href="#"></a>Twitter</li>
+            <li><a href="#"></a>Facbook</li>
+            <li><a href="#"></a>Linkedin</li>
+            <li><a href="#"></a>Email</li>
+          </ul>
+        </div>
+
+        <div class="line-hieght">
+          <ul>
+            <li><a href="./privay-policy.html">Privacy Policy</a></li>
+            <li><a href="./faq.html">Faq</a></li>
+          </ul>
+        </div>
+      </div>
+    </footer>
+  </body>
+  <script src="script.js"></script>
+</html>
+
